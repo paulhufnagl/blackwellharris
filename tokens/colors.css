@@ -1,0 +1,67 @@
+/* ============================================================
+   Blackwell Harris — Color Tokens
+   Impact-first multifamily office, Antwerp.
+   A four-step blue system: Ice Blue lights the page, Powder Blue
+   carries secondary surfaces, Sapphire is the brand/action color,
+   Deep Navy anchors dark areas, headings, and strong contrast.
+   ============================================================ */
+
+:root {
+  /* --- Core palette --------------------------------------------------- */
+  --bh-deep-navy:        #000926;  /* darkest: footer, dark bands, headings/ink, strong contrast */
+  --bh-sapphire:         #0f52ba;  /* primary brand: buttons, links, highlights, active states */
+  --bh-sapphire-hover:   #0c4296;  /* darker sapphire for hover/pressed */
+  --bh-powder-blue:      #a6c5d7;  /* secondary backgrounds & supporting elements */
+  --bh-ice-blue:         #d6e6f3;  /* main page background & light sections */
+
+  /* --- Legacy names, remapped onto the new palette -------------------- */
+  /* Components reference these directly; keeping the names lets the whole
+     kit recolor from one place without touching component source. */
+  --bh-deep-blue:        var(--bh-deep-navy);   /* dark surfaces / bands / footer / strong ink */
+  --bh-deep-blue-hover:  #0b1640;               /* lifted navy for hover on dark */
+  --bh-pale-brown:       var(--bh-sapphire);    /* emphasis & figures → now sapphire */
+  --bh-soft-brown:       #bcd6e8;               /* soft powder accent border */
+
+  /* --- Surface & background ------------------------------------------- */
+  --bh-canvas:           #e4eef8;             /* dominant light page background (pale ice tint) */
+  --bh-white:            #FFFFFF;               /* cards/forms that lift off the canvas */
+  --bh-soft-stone:       var(--bh-powder-blue); /* secondary blocks, element cards, photo placeholders */
+  --bh-powder-wash:      var(--bh-powder-blue); /* Impact section backdrop */
+  --bh-card-border:      #bcd6e8;               /* soft blue containment line on canvas */
+
+  /* --- Text & rules --------------------------------------------------- */
+  --bh-on-dark:          var(--bh-ice-blue);    /* light text/marks on Deep Navy surfaces */
+  --bh-ink:              var(--bh-deep-navy);   /* default body & headline text on light */
+  --bh-muted-slate:      #54658a;               /* metadata, dates, footer links, de-emphasis */
+  --bh-hairline:         #c2d8e8;               /* list rules & section dividers */
+
+  /* --- Semantic ------------------------------------------------------- */
+  --bh-focus-ring:       var(--bh-sapphire);
+  --bh-success:          #2f7d57;
+  --bh-error:            #B3261E;
+
+  /* ----------------------------------------------------------
+     Semantic aliases — reference these in components
+     ---------------------------------------------------------- */
+  --color-primary:           var(--bh-sapphire);
+  --color-primary-hover:     var(--bh-sapphire-hover);
+  --color-on-primary:        #FFFFFF;
+  --color-accent:            var(--bh-sapphire);
+  --color-accent-soft:       var(--bh-soft-brown);
+  --color-accent-cool:       var(--bh-powder-blue);
+
+  --surface-page:            var(--bh-canvas);      /* Ice Blue */
+  --surface-card:            var(--bh-white);
+  --surface-warm:            var(--bh-soft-stone);   /* Powder Blue */
+  --surface-cool:            var(--bh-powder-wash);  /* Powder Blue */
+  --surface-dark:            var(--bh-deep-navy);
+
+  --text-primary:            var(--bh-ink);          /* Deep Navy */
+  --text-muted:              var(--bh-muted-slate);
+  --text-on-dark:            var(--bh-on-dark);       /* Ice Blue */
+  --text-accent:             var(--bh-sapphire);
+
+  --border-card:             var(--bh-card-border);
+  --border-hairline:         var(--bh-hairline);
+  --border-focus:            var(--bh-focus-ring);
+}

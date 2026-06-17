@@ -1,0 +1,56 @@
+/* ============================================================
+   Blackwell Harris — Base reset & shared utilities
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-leading);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--bh-powder-blue);
+  color: var(--bh-deep-blue);
+}
+
+/* Keyboard focus uses the focus-ring color */
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* --- Scroll-reveal utility ---
+   Add .bh-reveal; toggle .is-in (e.g. via IntersectionObserver)
+   to fade content up 26px into place. Stagger with d1/d2/d3. */
+.bh-reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity   var(--duration-slow) var(--ease),
+    transform var(--duration-slow) var(--ease);
+}
+.bh-reveal.is-in { opacity: 1; transform: none; }
+.bh-reveal.d1 { transition-delay: 80ms; }
+.bh-reveal.d2 { transition-delay: 160ms; }
+.bh-reveal.d3 { transition-delay: 240ms; }
+.bh-reveal.d4 { transition-delay: 320ms; }
+
+/* Honor reduced-motion everywhere */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .bh-reveal { opacity: 1 !important; transform: none !important; }
+}

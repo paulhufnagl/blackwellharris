@@ -1,0 +1,49 @@
+/* ============================================================
+   Blackwell Harris — Spacing, Radius, Elevation & Motion
+   8px base with deliberate one-off values. Whitespace is the
+   primary trust signal; depth is mostly flat.
+   ============================================================ */
+
+:root {
+  /* --- Spacing scale --- */
+  --space-xxs:   2px;
+  --space-xs:    6px;
+  --space-sm:    8px;
+  --space-md:    12px;
+  --space-lg:    16px;
+  --space-xl:    24px;
+  --space-xxl:   32px;
+  --space-48:    48px;
+  --space-64:    64px;
+  --space-section: 96px;   /* dramatic vertical breathing room between sections */
+
+  /* --- Radius scale --- */
+  --radius-xs:   2px;    /* inputs, small utility */
+  --radius-sm:   4px;    /* small cards, chips, thumbnails */
+  --radius-md:   8px;    /* service / element / impact cards */
+  --radius-lg:   14px;   /* signature media cards, form panels */
+  --radius-xl:   20px;   /* large feature placeholders */
+  --radius-pill: 32px;   /* primary & outline CTA buttons */
+  --radius-full: 9999px; /* round status elements */
+
+  /* --- Layout --- */
+  --container-max: 1180px;
+  --measure:       680px;   /* body text column cap */
+
+  /* --- Elevation (mostly flat; depth from surface + media) --- */
+  --shadow-none:       none;
+  --shadow-card-hover: 0 22px 44px -28px rgba(24, 35, 80, 0.5);
+  --shadow-button:     0 10px 24px -14px rgba(24, 35, 80, 0.55);
+
+  /* --- Motion tokens --- */
+  /* the house easing — gentle deceleration */
+  --ease:           cubic-bezier(.22, .61, .36, 1); /* @kind other */
+  /* color / small state changes */
+  --duration-fast:  250ms; /* @kind other */
+  /* hovers, lifts, borders, buttons */
+  --duration-med:   450ms; /* @kind other */
+  /* scroll-reveal entrances */
+  --duration-slow:  700ms; /* @kind other */
+  /* slow photographic hover zoom */
+  --duration-zoom:  1800ms; /* @kind other */
+}

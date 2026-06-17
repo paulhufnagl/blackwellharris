@@ -1,0 +1,169 @@
+/* ============================================================
+   Blackwell Harris — Typography Tokens
+   Serif display for heritage; measured sans for everything else;
+   uppercase mono for quiet section markers.
+   ============================================================ */
+
+:root {
+  /* --- Families (licensed name first, then substitute + fallbacks) --- */
+  --font-display: 'Syne', 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body:    'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, Arial, sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, Menlo, monospace;
+
+  /* --- Type ramp: size / weight / line-height / tracking --- */
+  /* Hero Display */
+  --type-hero-size:        88px;
+  --type-hero-weight:      700;
+  --type-hero-leading:     1.04;
+  --type-hero-tracking:    -1px;
+
+  /* Product Display */
+  --type-product-size:     64px;
+  --type-product-weight:   700;
+  --type-product-leading:  1.06;
+  --type-product-tracking: -0.8px;
+
+  /* Section Display */
+  --type-section-size:     52px;
+  --type-section-weight:   600;
+  --type-section-leading:  1.1;
+  --type-section-tracking: -0.6px;
+
+  /* Section Heading */
+  --type-sectionhead-size:     40px;
+  --type-sectionhead-weight:   600;
+  --type-sectionhead-leading:  1.2;
+  --type-sectionhead-tracking: -0.3px;
+
+  /* Card Heading */
+  --type-cardhead-size:     28px;
+  --type-cardhead-weight:   600;
+  --type-cardhead-leading:  1.25;
+  --type-cardhead-tracking: -0.2px;
+
+  /* Feature Heading */
+  --type-feature-size:     22px;
+  --type-feature-weight:   600;
+  --type-feature-leading:  1.3;
+  --type-feature-tracking: -0.1px;
+
+  /* Body Large */
+  --type-bodylarge-size:    18px;
+  --type-bodylarge-weight:  400;
+  --type-bodylarge-leading: 1.5;
+
+  /* Body */
+  --type-body-size:    16px;
+  --type-body-weight:  400;
+  --type-body-leading: 1.6;
+
+  /* Button */
+  --type-button-size:     14px;
+  --type-button-weight:   500;
+  --type-button-leading:  1.5;
+  --type-button-tracking: 0.2px;
+
+  /* Caption */
+  --type-caption-size:    14px;
+  --type-caption-weight:  400;
+  --type-caption-leading: 1.4;
+
+  /* Mono Label (uppercase) */
+  --type-mono-size:     13px;
+  --type-mono-weight:   400;
+  --type-mono-leading:  1.4;
+  --type-mono-tracking: 1.2px;
+
+  /* Micro */
+  --type-micro-size:    12px;
+  --type-micro-weight:  400;
+  --type-micro-leading: 1.4;
+}
+
+/* ============================================================
+   Optional utility classes — convenient typographic presets.
+   Components may use these or compose the raw vars directly.
+   ============================================================ */
+.bh-hero {
+  font-family: var(--font-display);
+  font-size: var(--type-hero-size);
+  font-weight: var(--type-hero-weight);
+  line-height: var(--type-hero-leading);
+  letter-spacing: var(--type-hero-tracking);
+  color: var(--text-primary);
+}
+.bh-product {
+  font-family: var(--font-display);
+  font-size: var(--type-product-size);
+  font-weight: var(--type-product-weight);
+  line-height: var(--type-product-leading);
+  letter-spacing: var(--type-product-tracking);
+  color: var(--text-primary);
+}
+.bh-section-display {
+  font-family: var(--font-display);
+  font-size: var(--type-section-size);
+  font-weight: var(--type-section-weight);
+  line-height: var(--type-section-leading);
+  letter-spacing: var(--type-section-tracking);
+  color: var(--text-primary);
+}
+.bh-section-heading {
+  font-family: var(--font-display);
+  font-size: var(--type-sectionhead-size);
+  font-weight: var(--type-sectionhead-weight);
+  line-height: var(--type-sectionhead-leading);
+  letter-spacing: var(--type-sectionhead-tracking);
+  color: var(--text-primary);
+}
+.bh-card-heading {
+  font-family: var(--font-display);
+  font-size: var(--type-cardhead-size);
+  font-weight: var(--type-cardhead-weight);
+  line-height: var(--type-cardhead-leading);
+  letter-spacing: var(--type-cardhead-tracking);
+  color: var(--text-primary);
+}
+.bh-feature-heading {
+  font-family: var(--font-display);
+  font-size: var(--type-feature-size);
+  font-weight: var(--type-feature-weight);
+  line-height: var(--type-feature-leading);
+  color: var(--text-primary);
+}
+.bh-body-large {
+  font-family: var(--font-body);
+  font-size: var(--type-bodylarge-size);
+  font-weight: var(--type-bodylarge-weight);
+  line-height: var(--type-bodylarge-leading);
+  color: var(--text-primary);
+}
+.bh-body {
+  font-family: var(--font-body);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-leading);
+  color: var(--text-primary);
+}
+.bh-caption {
+  font-family: var(--font-body);
+  font-size: var(--type-caption-size);
+  font-weight: var(--type-caption-weight);
+  line-height: var(--type-caption-leading);
+  color: var(--text-muted);
+}
+.bh-mono-label {
+  font-family: var(--font-mono);
+  font-size: var(--type-mono-size);
+  font-weight: var(--type-mono-weight);
+  line-height: var(--type-mono-leading);
+  letter-spacing: var(--type-mono-tracking);
+  text-transform: uppercase;
+  color: var(--text-accent);
+}
+.bh-micro {
+  font-family: var(--font-body);
+  font-size: var(--type-micro-size);
+  font-weight: var(--type-micro-weight);
+  line-height: var(--type-micro-leading);
+}
